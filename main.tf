@@ -4,6 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "=3.42.0"
     }
+    tls = {
+      source = "hashicorp/tls"
+      # no version pinned: TFC will pull a recent version
+      # that can read whatever is in state
+    }
   }
 }
 
